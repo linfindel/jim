@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jim Button</title>
+
+  <style>
+    * {
+      transition: 0.25s ease;
+    }
+
+    body {
+      background-color: black;
+    }
+
+    button {
+      aspect-ratio: 1/1;
+
+      background-color: transparent;
+      background-image: url(button.png);
+      background-position: center;
+      background-size: cover;
+
+      border: none;
+      border-radius: 100vw;
+
+      filter: brightness(75%);
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 10%;
+    }
+  </style>
+</head>
+<body>
+  <button id="button" onclick="document.getElementById('jim').play(); document.getElementById('button').style.filter = 'brightness(100%)'; setTimeout(() => {
+    document.getElementById('button').style.filter = 'brightness(75%)';
+  }, 1000);"></button>
+
+  <audio id="jim" src="jim.mp3"></audio>
+</body>
+</html>
